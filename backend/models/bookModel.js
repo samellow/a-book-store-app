@@ -1,26 +1,23 @@
-import mongoose from "mongoose"
+import mongoose from 'mongoose';
 
 const bookSchema = mongoose.Schema(
-    {
-        title:{
-            type: String,
-            required: true,
-         }, 
-         author: {
-            type: String,
-            required: true,
-         },
-         publishYear: {
-            type: Number,
-            required: true,
-         },
+  {
+    title: {
+      type: String,
+      required: true,
     },
-    {
-        timestamps: true,
-    }
-
+    author: {
+      type: String,
+      required: true,
+    },
+    publishYear: {
+      type: Number,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
 );
 
-const Book = mongoose.model('Book', bookSchema);
-
-export default Book;
+export const Book = mongoose.model('Book', bookSchema);
